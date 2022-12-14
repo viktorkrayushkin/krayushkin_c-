@@ -17,14 +17,14 @@ string booltostr(bool a){
 int main() {
     Fraction a, b;
     cout<<"Первая дробь: \n ";
-    a.Input();
+    cin >> a;
     cout<<"Вторая дробь: \n ";
-    b.Input();
+    cin >> b;
 
     cout<<"Первая дробь: \n " ;
-    a.Print(); cout <<"\n";
+    cout << a <<"\n";
     cout<<"Вторая дробь: \n ";
-    b.Print(); cout <<"\n";
+    cout <<b<<"\n";
 
     Fraction multiplic = a * b;
     Fraction sum = a + b;
@@ -34,16 +34,15 @@ int main() {
     double c = 1.0 + double(a);
     double fraction = double(a / b);
 
-
     cout<<"Результат умножение первой на вторую дробь: ";
-    multiplic.Print(); cout <<"\n";
+    cout << multiplic <<"\n";
     cout<<"Сумма первой и второй дроби: ";
-    sum.Print(); cout <<"\n";
+    cout << sum <<"\n";
     cout<<"Уменьшение первой дроби на 1.0 результат в виде дроби: ";
-    reduce.Print(); cout <<"\n";
+    cout << reduce <<"\n";
     cout<<"Прибавление к первой дроби 1.0 результат в десятичном виде: ";
     cout << c << endl;
     cout<<"Результат в десятичном виде деления первой дроби на вторую ";
     cout << fraction << endl;
-    a.Print(); cout << " < " ; b.Print(); cout <<" : " << booltostr(t);
+    cout <<a<< " < "<< b <<" : " << booltostr(t);
 }

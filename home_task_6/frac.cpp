@@ -53,20 +53,17 @@ void Fraction::Set(int numerator, int denominator)
 
 }
 
-void Fraction::Input(void)
-{
-    cout << "Введите числитель дроби: ";
-    int numerator;
-    cin >> numerator;
-    cout << " Введите знаменатель дроби: ";
-    int denominator;
-    cin >> denominator;
-    Set(numerator, denominator);
+istream &operator >> (istream& in, Fraction & fraction)
+{   cout<<"Введите числитель дроби: ";
+    in >> fraction._numerator_;
+    cout<<" Введите знаменатель дроби: ";
+    in >> fraction._denominator_;
+    return in;
 }
-
-void Fraction::Print(void)
+ostream &operator <<(ostream& out, const Fraction & fraction)
 {
-    cout << _numerator_ << "/" << _denominator_ ;
+    out << fraction._numerator_ <<"/"<< fraction._denominator_;
+    return out;
 }
 
 Fraction Fraction::Reciprocal(void) {

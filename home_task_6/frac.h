@@ -1,5 +1,7 @@
 #pragma once
-
+#include <iostream>
+#include <fstream>
+using namespace std;
 int NOD(int c, int d);
 
 class Fraction {
@@ -22,9 +24,10 @@ public:
         return _denominator_ ;
     }
 
+    friend istream& operator >> (istream &in,  Fraction& obj);
+    friend ostream& operator << (ostream &out, const Fraction& obj);
+
     void Set(int numerator, int denominator);
-    void Input(void);
-    void Print(void);
 
     Fraction Reciprocal(void);
 
