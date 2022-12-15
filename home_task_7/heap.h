@@ -66,7 +66,7 @@ Heap<T>::Heap(initializer_list<T> arr) {
     size = 0;
     used_mem_ = 1;
     cont_ = new T[1];
-    for (int i = 0; i < arr.size(); i++)
+    for (int i = 1; i < arr.size(); i++)
         Add(*(arr.begin() + i));
 }
 
@@ -76,7 +76,7 @@ int Heap<T>::Add(T elem) {
         T* tmp = cont_;
         cont_ = new T[used_mem_ * 2];
         used_mem_ *= 2;
-        for (int i = 0; i < size; i++)
+        for (int i = 1; i < size; i++)
             cont_[i] = tmp[i];
         delete[] tmp;
     }
